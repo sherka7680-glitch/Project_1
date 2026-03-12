@@ -23,21 +23,26 @@ namespace Project_1
           
             double imt = massa / Math.Pow(дутпер/100, 2);
             Console.WriteLine($"Ваш индекс массы тела: {massa / Math.Pow(дутпер/100, 2)}");
+            string res;
             if (imt > 30)
             {
-                Console.WriteLine("У вас ожирение");
+                res = "У вас ожирение";
+                Console.WriteLine();
             }
             else if (imt > 25)
             {
-                Console.WriteLine("У вас избыточный вес");
+                res = "У вас избыточный вес";
+                Console.WriteLine(res);
             }
             else if (imt > 18.5)
             {
-                Console.WriteLine("У вас нормальный вес");
+                res = "У вас нормальный вес";
+                Console.WriteLine(res);
             }
             else
             {
-                Console.WriteLine("У вас недостаточный вес");
+                res = "У вас недостаточный вес";
+                Console.WriteLine(res);
             }
             Console.WriteLine("===========================================================================");
              Console.Write("Введите возраст: ");
@@ -62,7 +67,7 @@ namespace Project_1
             Console.WriteLine($"Возраст в минутах {minuta.ToString("N0")}");
             Console.WriteLine($"Возраст в секундах {seconda.ToString("N0")}");
             Console.WriteLine("===============================================================");
-
+            Console.WriteLine($"═══════════════════════════════════════════════\r\n             ЛИЧНАЯ КАРТОЧКА\r\n═══════════════════════════════════════════════\r\nИмя       │ {name}\r\nВозраст   │ {age} лет\r\nРост      │ {дутпер} см\r\nВес       │ {massa} кг\r\n───────────────────────────────\r\nИМТ       │ {imt}\r\nСтатус    │ {res}\r\n═══════════════════════════════════════════════");
         }
         static int ReadInt(string prompt, int min, int max)
         {
